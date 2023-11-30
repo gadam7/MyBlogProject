@@ -1,3 +1,11 @@
+# 03-Layouts components
+- Frontview main components
+- Header component
+- Category navbar component
+- Footer component
+- Post card component
+- Subscription card component
+
 # 01-Starting the app - components
 - ng g c layouts/header --dry-run
 - ng g c layouts/category-navbar
