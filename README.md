@@ -1,3 +1,19 @@
+# 01-Starting the app - components
+- ng g c layouts/header --dry-run
+- ng g c layouts/category-navbar
+- ng g c layouts/footer
+
+- ng g c pages/home
+- ng g c pages/single-category
+- ng g c pages/single-post
+- ng g c pages/terms-and-conditions
+- ng g c pages/contact-us
+
+- ng g c subscription-form
+
+- ng g c comments/comment-form
+- ng g c comments/comment-list
+
 # AngularBlogApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
