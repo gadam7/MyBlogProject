@@ -1,3 +1,11 @@
+# 04-Pages Design
+- Prepare app component
+- Design Homepage component
+- Design Single Category component
+- Design Single Page component
+- Design Comment component
+- Design all other Pages component
+
 # 03-Layouts components
 - Frontview main components
 - Header component
