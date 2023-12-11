@@ -3,7 +3,7 @@
     <div class="container">
         <div class="collapse navbar-collapse justify-content-center">
             <ul class="navbar-nav" *ngFor="let category of categoryArray">
-                <li class="nav-item ml-3"><a href="" class="nav-link"> {{ category.description }}-{{ category.color }}</a></li>
+                <li class="nav-item ml-3"><a class="nav-link" [routerLink]="['/category', category.description, category.id]"> {{ category.description }} - {{ category.color }} </a></li>
             </ul>
         </div>
     </div>

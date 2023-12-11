@@ -1,14 +1,15 @@
-<div class="card shadow-effect">
-    <img src="https://www.pexels.com/photo/close-up-photo-of-paint-on-cup-3101530/" alt="post-image" class="card-img-top">
+<div class="card shadow-effect" *ngIf="postData" [routerLink]="['/post', postData.id]">
+    <img src="{{ postData.postImgPath }}" alt="post-image" class="card-img-top">
 
     <div class="card-body">
-        <small class="bg-light text-danger text-center"> Design </small>
-        <small class="bg-light text-success text-center ml-3"> Featured </small>
-        <small class="bg-light text-info text-center ml-3"> Views - 100.000 </small>
+        <small class="bg-light text-danger text-center"> {{ postData.category }} </small>
+        <small class="bg-light text-success text-center ml-3"> Featured </small> 
+        <small class="bg-light text-info text-center ml-3"> Views - {{ postData.views }} </small>
 
-        <h5 class="mt-1">HOW TO START A BLOG IN 2023 EDITED NEW CATEGORY</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta praesentium fugit aperiam at veritatis aliquam eligendi accusantium iste quis ullam iure impedit distinctio adipisci ducimus dignissimos tempore iusto, officiis eaque?</p>
+        <h5 class="mt-1"> {{ postData.title }} </h5>
+        <p> {{ postData.excerpt }} </p>
 
-        <small class="bg-light text-warning text-center ml-3">LAST UPDATED - NOV 30, 2023</small>
+        <small class="bg-light text-warning text-center ml-3">LAST UPDATED - {{ postData.createdAt | date}}</small>
+
     </div>
 </div>

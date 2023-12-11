@@ -3,22 +3,16 @@
         <div class="col-md-9">
 
             <div class="card shadow-effect">
-                <img src="https://www.pexels.com/photo/yellow-blue-red-pink-purple-green-multicolored-open-umbrellas-hanging-on-strings-under-blue-sky-163822/" alt="" class="card-img-top img-fluid">
+                <img src="{{ postData.postImgPath }}" alt="" class="card-img-top img-fluid">
                 <div class="card-body">
-                    <small class="bg-light text-danger text-center"> Design </small>
+                    <small class="bg-light text-danger text-center"> {{ postData.category.categoryDescription }} </small>
                     <small class="bg-light text-success text-center ml-2"> Featured </small>
-                    <small class="bg-light text-info text-center ml-2"> Views - 100.000 </small>
-                    <small class="bg-light text-warning text-center ml-2"> LAST UPDATED - NOV 30, 2023 </small>
+                    <small class="bg-light text-info text-center ml-2"> Views - {{ postData.views }} </small>
+                    <!-- Εδώ δεν μου δουλεύει η date... -->
+                    <small class="bg-light text-warning text-center ml-2"> LAST UPDATED - {{ postData.createdAt | date }} </small>
 
-                    <h1 class="mt-3 mb-3">HOW TO START A BLOG IN 2023 EDITED NEW CATEGORY</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eos in neque error, 
-                        tempora odio quo excepturi quidem labore sequi assumenda. Tenetur vitae alias veritatis 
-                        commodi esse consequatur cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Impedit nostrum sed soluta perspiciatis omnis neque sequi perferendis magnam id. Dolores 
-                        vero magnam unde ab ex, fugit eos! Doloribus, quibusdam non. Lorem, ipsum dolor sit amet 
-                        consectetur adipisicing elit. Harum soluta perspiciatis natus sit sint velit, consectetur 
-                        voluptas eos, esse magnam illum quas placeat nostrum necessitatibus nemo incidunt officia 
-                        aliquam dolore.</p>
+                    <h1 class="mt-3 mb-3"> {{ postData.title }}</h1>
+                    <p [innerHTML]="postData.content"></p>
                 </div>
             </div>
 

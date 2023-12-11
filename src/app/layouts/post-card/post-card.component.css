@@ -1,5 +1,6 @@
 .card {
     max-width: 400px;
+    min-height: 500px;
 }
 
 :root {
@@ -11,8 +12,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--body-text-color);
+    display: contents;
 }
 
 .site-logo {
@@ -35,18 +37,30 @@ body {
     background-color: var(--primary-color);
 }
 
-input[type = text], input[type = email] {
+.bg-secondary-theme {
+    background-color: var(--secondary-color);
+}
+
+.text-theme-primary {
+    color: var(--primary-color);
+}
+
+input[type = text], input[type = email], input[type = password] {
     height: 60px;
     padding-left: 20px;
-    font-size: 13px;
-    width: 100%;
+    width: 100%!important;
 }
 
 .btn-theme {
     height: 58px;
     border: none;
-    font-size: 13px;
+    /* font-size: 13px; */
     background-color: var(--primary-color);
     color: aliceblue;
 }
 
+#allPosts td, #allPosts th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    max-width: 20px;
+}
