@@ -1,3 +1,11 @@
+# 05-Admin Dashbord
+- New project folder
+# Subscription form dynamic
+- Sub form to Angular Template Driven
+- Add form validations
+- Store the subscribers in the firestore
+- Load all the subscribers users inside admin dashboard
+
 # 04-Pages Design
 - Prepare app component
 - Design Homepage component

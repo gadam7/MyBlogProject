@@ -6,7 +6,7 @@
                 <img src="{{ postData.postImgPath }}" alt="" class="card-img-top img-fluid">
                 <div class="card-body">
                     <small class="bg-light text-danger text-center"> {{ postData.category.categoryDescription }} </small>
-                    <small class="bg-light text-success text-center ml-2"> Featured </small>
+                    <small class="bg-light text-success text-center ml-2" *ngIf="postData.isFeatured"> Featured </small>
                     <small class="bg-light text-info text-center ml-2"> Views - {{ postData.views }} </small>
                     <!-- Εδώ δεν μου δουλεύει η date... -->
                     <small class="bg-light text-warning text-center ml-2"> LAST UPDATED - {{ postData.createdAt | date }} </small>
