@@ -49,7 +49,8 @@ export class PostsService {
             postImgPath: data.postImgPath,
             excerpt: data.excerpt,
             category: data.category.categoryDescription,
-            createdAt: createdAt
+            createdAt: createdAt,
+            views: data.views
           } as unknown as Post;
         })
       })
@@ -85,7 +86,8 @@ export class PostsService {
             postImgPath: data.postImgPath,
             excerpt: data.excerpt,
             category: data.category.categoryDescription,
-            createdAt: createdAt
+            createdAt: createdAt,
+            views: data.views
           } as unknown as Post;
         })
       })
@@ -121,7 +123,8 @@ export class PostsService {
             postImgPath: data.postImgPath,
             excerpt: data.excerpt,
             category: data.category.categoryDescription,
-            createdAt: createdAt
+            createdAt: createdAt,
+            views: data.views
           } as unknown as Post;
         })
       })
@@ -161,38 +164,21 @@ export class PostsService {
             postImgPath: data.postImgPath,
             excerpt: data.excerpt,
             category: data.category.categoryDescription,
-            createdAt: createdAt
+            createdAt: createdAt,
+            views: data.views
           } as unknown as Post;
         })
       })
     );
   }
 
-//   countViews( postId: any ) {
-//     const db = getFirestore();
-//     const docRef = doc(db, 'collection', 'doc');
+  countViews( postId: any ) {
 
-// await updateDoc(docRef, {
-//  views: increment(1)
-// });
-
-
-//     const viewsCount = {
-//       views: firebase.firestore.FieldValue.increment(1)
-//     }
-
-//     this.firestore.doc(`post/${postId}`).update(viewsCount).then(() => {
-//       console.log('Views Count Updated ..!')
-//     });
-//   }
-async countViews(postId: any) {
-  const db = getFirestore();
-  const docRef = doc(db, 'post', postId);
-
-  await updateDoc(docRef, {
-    views: increment(1)
-  });
-
-  console.log('Views Count Updated ..!');
-}
+    const viewsCount = {
+      views: firebase.firestore.FieldValue.increment(1)
+    }
+    this.firestore.doc(`posts/${postId}`).update(viewsCount).then(() => {
+      console.log('Views Count Updated ..!');
+    })
+  }
 }
